@@ -17,6 +17,7 @@ public class Test03 {
             /**
              * 是否可以序列化？
              * 反序列化是否会报错？
+             *
              */
 
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(

@@ -31,11 +31,13 @@ public class Animal implements Serializable {
     private void writeObject(ObjectOutputStream out) throws IOException {
         out.writeInt(id);
         out.writeObject(name);
+        //throw new RuntimeException("不允许序列化这个类");
     }
 
     private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
         this.id = in.readInt();
         this.name = in.readObject().toString();
+       //throw new RuntimeException("不允许反序列化");
     }
 
 
