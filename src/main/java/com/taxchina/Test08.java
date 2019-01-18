@@ -12,8 +12,13 @@ public class Test08 {
     private static final int KEEP_ALIVE_TIME = 100;
 
     private static final BlockingQueue<Runnable> WORK_QUEUE = new ArrayBlockingQueue<>(10);
-    private static ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(CORE_POOL_SIZE, MAXIMUM_POOL_SIZE, KEEP_ALIVE_TIME,
-            TimeUnit.SECONDS, WORK_QUEUE, new ThreadFactoryImpl("myThread"), (r, executor) -> System.out.println(JSON.toJSONString(executor)));
+    private static ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(CORE_POOL_SIZE,
+            MAXIMUM_POOL_SIZE,
+            KEEP_ALIVE_TIME,
+            TimeUnit.SECONDS,
+            WORK_QUEUE,
+            new ThreadFactoryImpl("myThread"),
+            (r, executor) -> System.out.println(JSON.toJSONString(executor)));
 
 
     public static void main(String[] args) {

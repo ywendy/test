@@ -19,13 +19,13 @@ public class Test07 {
 
         try {
             long start = System.currentTimeMillis();
-         /*   System.out.println(future1.get());
+            System.out.println(future1.get());
             System.out.println(future2.get());
-            System.out.println(future3.get());*/
+            System.out.println(future3.get());
 
-            System.out.println( orderService.send("1"));
-            System.out.println( orderService.send("2"));
-            System.out.println( orderService.send("3"));
+//            System.out.println( orderService.send("1"));
+//            System.out.println( orderService.send("2"));
+//            System.out.println( orderService.send("3"));
             System.out.println("耗时："+(System.currentTimeMillis()-start));
         } catch (Exception e) {
             e.printStackTrace();

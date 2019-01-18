@@ -5,7 +5,7 @@ public class OrderSevice {
 
     public String  send(String name){
         try {
-            Thread.sleep(10000);
+            Thread.sleep(100);
         } catch (InterruptedException e) {
             //
         }

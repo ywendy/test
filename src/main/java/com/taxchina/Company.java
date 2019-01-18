@@ -21,14 +21,14 @@ public class Company  implements Cloneable,Serializable {
     @Override
     protected Object clone()  {
         //浅克隆
-        try {
-            return super.clone();
-        } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
-        }
-        return  this;
+//        try {
+//            return super.clone();
+//        } catch (CloneNotSupportedException e) {
+//            e.printStackTrace();
+//        }
+//        return  this;
         //深克隆
-/*
+
 
         try( ByteArrayOutputStream baos = new ByteArrayOutputStream();
              ObjectOutputStream oos = new ObjectOutputStream(baos)) {
@@ -40,7 +40,7 @@ public class Company  implements Cloneable,Serializable {
             e.printStackTrace();
         }
         return this;
-*/
+
 
 
     }

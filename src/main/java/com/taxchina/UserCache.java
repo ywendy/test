@@ -14,7 +14,7 @@ public final class UserCache {
 
 
 
-    public static User get(String key){
+    public  static User get(String key){
         readLock.lock();
         try{
             return   USER_CACHE.get(key);
@@ -23,7 +23,7 @@ public final class UserCache {
         }
     }
 
-    public static void update(String key,User user){
+    public  static void update(String key,User user){
         writeLock.lock();
         try {
             USER_CACHE.put(key, user);

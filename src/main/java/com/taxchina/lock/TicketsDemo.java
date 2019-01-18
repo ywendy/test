@@ -18,12 +18,16 @@ public class TicketsDemo implements Runnable {
         }
     }
 
-    private     void sale(){
+    private   synchronized   void sale(){
         if (totalCount > 0) {
             --totalCount;//已经卖出，票的总数减去1
             System.out.println(Thread.currentThread().getName() + " 卖出 " + (100-totalCount) + " 号票，剩余："+totalCount);
 
         }
+    }
+
+    public void abc(){
+
     }
 
 }

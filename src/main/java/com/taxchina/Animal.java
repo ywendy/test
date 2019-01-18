@@ -13,6 +13,15 @@ public class Animal implements Serializable {
     private static final long serialVersionUID = 3607896278127298777L;
     private Integer id;
     private String name;
+    private String color;
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
 
     public Animal() {
     }

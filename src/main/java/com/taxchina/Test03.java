@@ -25,9 +25,9 @@ public class Test03 {
              ObjectInputStream ois = new ObjectInputStream(new FileInputStream(
                      "d:/animal.txt"))) {
 
-            Animal animal01 = new Animal(1, "cat");
+       /*    Animal animal01 = new Animal(1, "cat");
             System.out.println("序列化之前：" + JSON.toJSONString(animal01));
-            oos.writeObject(animal01);
+            oos.writeObject(animal01);*/
             Animal animal02 = (Animal) ois.readObject();
             System.out.println("序列化之后：" + JSON.toJSONString(animal02));
         } catch (Exception e) {

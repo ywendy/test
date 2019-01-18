@@ -25,13 +25,14 @@ public class Test02 {
         depts.add(d1);
         depts.add(d2);
         c1.setDepts(depts);
+
         Company c2 = (Company) c1.clone();
         print(c1, c2);
-        System.out.println();
-        System.out.println("------------------改变包装类型和String类型,重新赋值--------------");
-        c2.setId(500);
+       System.out.println();
+       System.out.println("------------------改变包装类型和String类型,重新赋值--------------");
+       c2.setId(new Integer(500));
         c2.setName("zsw01");
-        print(c1, c2);
+      print(c1, c2);
         System.out.println();
         System.out.println("------------------改变引用类型，重新赋值-------------------");
         List<Dept> list = c2.getDepts();
@@ -39,6 +40,8 @@ public class Test02 {
             dept.setName("研发部");
         });
         print(c1, c2);
+
+        //?Integer 比较是否相等<Test09>，Company clone方法IO流未关闭？
 
 
     }
